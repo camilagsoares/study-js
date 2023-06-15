@@ -45,7 +45,7 @@ function saudacao(nome) {
 
 // saudacao("Camila");
 
-const variavel = saudacao();
+const variavel = saudacao('Camila');
 console.log(variavel)
 
 // const soma = () => {}

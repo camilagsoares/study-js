@@ -80,10 +80,10 @@ const alunosEscola = {
     this.idade++;
   },
 };
-console.log(`${this.idade}`)
-alunosEscola.fala();
-alunosEscola.incrementaIdade();
-alunosEscola.fala();
+// console.log(`${this.idade}`);
+// alunosEscola.fala();
+// alunosEscola.incrementaIdade();
+// alunosEscola.fala();
 // console.log(alunosEscola.nome)
 
 function criaNomes(nome, sobrenome, idade) {
@@ -96,3 +96,33 @@ function criaNomes(nome, sobrenome, idade) {
 
 const pessoa1 = criaNomes("Camila", "Soares", 23);
 // console.log(pessoa1);
+
+// Valores primitivos e valores por referência
+//Os valores imutáveis(que nao mudam) são string,boolean,number,undefined
+let nomeMi = 'Camila'
+nomeMi[0] = 'A'
+// console.log(nomeMi)
+
+// let a = "A";
+// let b = a;
+// console.log(a,b)
+
+// a = 'Outra coisa';
+// console.log(a,b)
+// nesse caso no console os dados são diferentes pois b é uma cópia de A
+//quando usado esse mesmo exemplo em um valor mutável(array,object,function) ambos ficam com o mesmo valor,pq a variável aponta para o valor da mesma memória
+
+// let a = [1,2,3]
+// let b = a;
+// a.push(4)
+// console.log(a,b)
+
+let a = {
+  nome: 'Camila',
+  sobrenome: 'Soares'
+};
+
+let b = {...a};
+
+a.nome = 'Ana';
+console.log(a,b)
